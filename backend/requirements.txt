@@ -4,4 +4,4 @@ python-dotenv==1.*
 torch==2.8.*
 opencv-python==4.12.*
 numpy==2.2.*
-deepsort-realtime==1.3.*
+deepsort-realtime
