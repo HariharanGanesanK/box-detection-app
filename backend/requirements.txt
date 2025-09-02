@@ -4,4 +4,5 @@ python-dotenv
 torch
 opencv-python
 numpy
-deepsort-realtime
+pillow
+git+https://github.com/GeekAlexis/FastMOT.git
