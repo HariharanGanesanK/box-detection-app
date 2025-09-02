@@ -1,38 +1,199 @@
+/* --- Import a clean, modern font from Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  /* --- Use the imported font with fallback options --- */
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e0e0e0; /* Lighter text color for dark background */
+
+  /* --- Background Image & Overlay --- */
+  /* Updated background image to a box storage godown */
+  background-image: 
+    linear-gradient(rgba(25, 28, 36, 0.85), rgba(25, 28, 36, 0.85)), 
+    url('https://images.pexels.com/photos/4397860/pexels-photo-4397860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Keeps the background stationary on scroll */
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: transparent; /* Make header transparent */
+  padding: 30px 20px;
   color: white;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Add shadow to text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.controls {
+  /* --- Glassmorphism Effect --- */
+  background-color: rgba(38, 41, 51, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* The "frosted glass" blur */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 550px;
+  text-align: left;
+}
+
+.error-box {
+  padding: 15px;
+  background-color: rgba(211, 47, 47, 0.2);
+  border: 1px solid rgba(239, 83, 80, 0.5);
+  color: #ffcdd2;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.status-box {
+  padding: 15px;
+  background-color: rgba(67, 160, 71, 0.15);
+  border: 1px solid rgba(102, 187, 106, 0.4);
+  color: #c8e6c9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.status-box p {
+  margin: 5px 0;
+}
+
+.live-counts {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.live-counts hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
+}
+
+.live-counts p {
+  margin: 8px 0;
+}
+
+h2 {
+  margin-top: 0;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #b0b0b0; /* Lighter label color */
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(20, 20, 30, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.form-group select option {
+    background-color: #262933;
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 10px;
+}
+
+.dropdown-container select {
+  flex-grow: 1;
+}
+
+.dropdown-container button {
+  padding: 0 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(20, 20, 30, 0.5);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-container button:hover {
+    background-color: rgba(50, 50, 60, 0.7);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.button-group button {
+  flex-grow: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button-group button:hover {
+    transform: translateY(-2px); /* Add a subtle hover effect */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.button-group button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.start-btn { 
+    background: linear-gradient(45deg, #4CAF50, #81C784);
+}
+.stop-btn { 
+    background: linear-gradient(45deg, #f44336, #e57373);
 }
