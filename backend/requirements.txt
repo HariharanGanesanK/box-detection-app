@@ -1,7 +1,9 @@
 fastapi
 uvicorn
 python-dotenv
-torch
-opencv-python
 numpy
 pillow
+# Headless OpenCV (no GUI dependencies)
+opencv-python-headless==4.9.0.80
+# CPU-only torch (much smaller than full GPU build)
+torch==2.2.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
