@@ -1,16 +1,3 @@
-# Web framework
 fastapi
 uvicorn
-python-dotenv
-python-multipart
-
-# Core ML stack
-torch
-torchvision
-numpy
-pillow
-opencv-python-headless
-
-# Optional (only if used in your code)
-requests
-pydantic
+gunicorn
